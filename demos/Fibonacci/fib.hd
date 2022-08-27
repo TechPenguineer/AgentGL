@@ -1,0 +1,7 @@
+func calculate(n int64) -> int64
+    if((n is 0) or (n is 1))
+        put n
+    end
+    
+    put fib(n-1) + fib(n-2)
+end

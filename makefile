@@ -2,7 +2,9 @@ all:
 	make interpreter
 	
 interpreter:
-	dotnet build src/Hades.Core/Hades.Core.csproj
+	mkdir ./bin/
+	dotnet build src/Hades.Core/Hades.Core.csproj -o bin/
 
 run:
 	dotnet run --project src/Hades.Core/Hades.Core.csproj
+

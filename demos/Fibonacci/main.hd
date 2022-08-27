@@ -1,0 +1,5 @@
+with fib from fib.hd
+with console from std:io
+with Int fixed from std:int
+
+fib.calculate(parse(value=console.in(),raise=false,defaultValue=0))

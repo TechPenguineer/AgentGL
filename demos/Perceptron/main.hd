@@ -1,0 +1,28 @@
+let points double[*] = 
+{
+    {245, 1400},
+    {312, 1600},
+    {279, 1700},
+    {308, 1875},
+    {199, 1100},
+    {219, 1550},
+    {405, 2350},
+    {324, 2450},
+    {319, 1425},
+    {255, 1700}
+}
+
+var weight = 10.0
+var bias = 100.0
+var lr = 0.000001
+
+for(_ in range(1000000))
+    for(var point in points)
+        var prediction = point[0] * weight + bias
+        var error = point[1] - prediction
+        var gradient = point[0] * error * lr
+
+        bias = bias + gradient
+        weight = weight + weight * gradient
+    end
+end
