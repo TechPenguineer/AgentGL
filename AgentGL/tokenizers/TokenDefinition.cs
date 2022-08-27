@@ -12,7 +12,7 @@ namespace AgentGL.Parsing.Tokenizers
 
         public TokenDefinition(TokenType returnsToken, string regexPattern, int precedence)
         {
-            _regex = new Regex(regexPattern, RegexOptions.IgnoreCase | RegexOptions.Compiled );
+            _regex = new Regex(regexPattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
             _returnsToken = returnsToken;
             _precedence = precedence;
         }
@@ -20,7 +20,7 @@ namespace AgentGL.Parsing.Tokenizers
         public IEnumerable<TokenMatch> FindMatches(string inputString)
         {
             var matches = _regex.Matches(inputString);
-            for(int i=0; i<matches.Count; i++)
+            for (int i = 0; i < matches.Count; i++)
             {
                 yield return new TokenMatch()
                 {
