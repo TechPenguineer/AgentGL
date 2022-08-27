@@ -1,0 +1,8 @@
+class index using GL
+{
+    public fx Main()
+    {
+        set win = GL.window.instance.create(title="Hello World!", size=(200,500));
+        win.show();
+    }
+}
